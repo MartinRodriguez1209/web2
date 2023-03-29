@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Datos</legend>
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="nombre" />
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" />
+
+        <label for="dni">DNI</label>
+        <input type="number" id="dni" name="dni" required />
+
+        <label for="fecha_nac">Fecha de nacimiento</label>
+        <input type="date" name="fecha_nac" id="fecha_nac" />
+
+        <input type="submit" value="Enviar" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos materias</legend>
+
+        <label for="ing_web_2">Ing web 2</label>
+        <input type="checkbox" name="ing_web_2" id="ing_web_2" />
+
+        <label for="redes_2">Redes 2</label>
+        <input type="checkbox" name="redes_2" id="redes_2" />
+
+        <label for="turno_mañana">Turno mañana</label>
+        <input type="radio" name="turno" id="turno_mañana" />
+        <label for="turno_tarde">Turno tarde</label>
+        <input type="radio" name="turno" id="turno_tarde" />
+
+        <label for="edad">Edad</label>
+        <input type="range" name="edad" id="edad" min="0" max="50" step="5" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Tipo de auto</legend>
+        <label for="tipo_auto">Tipo de auto</label>
+        <select name="tipo_auto" id="tipo_auto">
+          <option value="auto">Auto rojo</option>
+          <option value="camion">Camion doble acoplado</option>
+          <option value="moto">Moto azul</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Carga de archivos</legend>
+        <label for="archivo">Archivo</label>
+        <input type="file" name="archivo" id="archivo" />
+      </fieldset>
+
+      <textarea name="opinion" id="opinion" cols="30" rows="10"></textarea>
+
+      <input type="submit" value="Enviar" />
+      <input type="reset" />
+    </form>
+  </body>
+</html>
