@@ -5,7 +5,7 @@ h1 {
 .contenedor{
 background-color: coral;
 font-size: 20px;
-width: 300px;
+width: 600px;
 height: 200px;
 overflow: auto;
 }
@@ -13,5 +13,5 @@ overflow: auto;
 
 div p{
     color: red;
-    font-size: 2vw;
+    font-size: 20px;
 }

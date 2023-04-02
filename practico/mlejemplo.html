@@ -2,54 +2,128 @@
 <html>
   <head>
     <title>ejemplo mercado libre</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div>
+    <div class="div_header">
       <!--cabecera con buscador-->
-      <table style="padding: 50%">
-        <tr>
-          <th>
-            <img
-              src="/multimedia/mercadolibre.svg"
-              alt="logo mercado libre"
-              width="50"
-            />
-          </th>
-          <th>
-            <input
-              type="text"
-              name="buscador"
-              size="50"
-              style="text-align: center"
-              style="padding: 50%"
-            />
-            <input type="submit" value="Buscar" />
-          </th>
-        </tr>
-      </table>
+      <div class="div_header_cont">
+        <img
+          class="logo"
+          src="/multimedia/mercadolibre.svg"
+          alt="logo mercado libre"
+          width="100"
+        />
+      </div>
+      <div class="div_header_cont_center">
+        <input class="search_bar" type="text" name="buscador" size="50" />
+        <input type="submit" value="Buscar" />
+      </div>
+      <div class="div_header_cont_right">
+        <img
+          class="img"
+          src="/multimedia/D_NQ_773701-MLA54334638216_032023-OO.webp"
+          alt="promo"
+        />
+        <div class="div_botones_usuario">
+          <a class="a_botones_usuario" href="#">
+            <img class="icono_usuario" src="/multimedia/usuario.png" alt="" />
+            <h4 class="texto_botones_usuario">Martin</h4>
+          </a>
+          <a href=""><h4 class="texto_botones_usuario">mis compras</h4> </a>
+        </div>
+      </div>
     </div>
 
     <div>
       <marquee>
         <img src="/multimedia/Screenshot from 2023-03-22 18-21-37.png" alt="" />
-        <img src="/multimedia/Screenshot from 2023-03-22 18-21-37.png" alt=""
-      /></marquee>
+        <img src="/multimedia/Screenshot from 2023-03-22 18-21-37.png" alt="" />
+      </marquee>
     </div>
 
-    <div>
+    <div class="pagos">
       <!--parte de abajo pagos-->
-      <span
-        ><img
-          src="/multimedia/Screenshot from 2023-03-22 18-15-06.png"
-          alt="pago"
-          width="300"
-      /></span>
-      <span
-        ><img
-          src="/multimedia/Screenshot from 2023-03-22 18-16-37.png"
-          alt="pago"
-          width="300"
-      /></span>
+      <div class="medio_pago">
+        <a href="">
+          <img
+            class="icono_pago"
+            src="/multimedia/tarjeta-de-cajero-automatico.png"
+            alt="tarjeta"
+        /></a>
+        <h4 class="h4_tipo_pago">Tarjeta de credito</h4>
+      </div>
+      <div class="medio_pago">
+        <a href="">
+          <img
+            class="icono_pago"
+            src="/multimedia/credit-card (1).png"
+            alt="tarjeta"
+        /></a>
+        <h4 class="h4_tipo_pago">Tarjeta de debito</h4>
+      </div>
+      <div class="medio_pago">
+        <a href=""
+          ><img class="icono_pago" src="/multimedia/money.png" alt="tarjeta"
+        /></a>
+        <h4 class="h4_tipo_pago">Efectivo</h4>
+      </div>
+    </div>
+
+    <div class="div_cont_productos">
+      <div class="div_producto">
+        <a class="a_cont_producto" href=""
+          ><img
+            class="img_producto"
+            src="/multimedia/productos/D_NQ_NP_802516-MLA48533694456_122021-O.webp"
+            alt=""
+        /></a>
+        <div class="cont_datos_producto">
+          <h6 class="precio_producto">20.000$</h6>
+          <h5 class="nombre_producto">
+            Auriculares in-ear inalámbricos Sony WF-C500 negro
+          </h5>
+        </div>
+      </div>
+      <div class="div_producto">
+        <a class="a_cont_producto" href=""
+          ><img
+            class="img_producto"
+            src="/multimedia/productos/D_NQ_NP_877453-MLA48811859675_012022-O.webp"
+            alt=""
+        /></a>
+        <div class="cont_datos_producto">
+          <h6 class="precio_producto">50.000$</h6>
+          <h5 class="nombre_producto">
+            Auriculares Audio-Technica M-Series ATH-M50x
+          </h5>
+        </div>
+      </div>
+      <div class="div_producto">
+        <a class="a_cont_producto" href=""
+          ><img
+            class="img_producto"
+            src="/multimedia/productos/D_NQ_NP_952934-MLA49589690352_042022-O.webp"
+            alt=""
+        /></a>
+        <div class="cont_datos_producto">
+          <h6 class="precio_producto">200.000$</h6>
+          <h5 class="nombre_producto">Guitarra eléctrica Schecter Omen-7</h5>
+        </div>
+      </div>
+      <div class="div_producto">
+        <a class="a_cont_producto" href=""
+          ><img
+            class="img_producto"
+            src="/multimedia/productos/D_NQ_NP_955982-MLA48564390277_122021-O.webp"
+            alt=""
+        /></a>
+        <div class="cont_datos_producto">
+          <h6 class="precio_producto">100.000$</h6>
+          <h5 class="nombre_producto">Arturia Microfreak</h5>
+        </div>
+      </div>
     </div>
   </body>
 </html>

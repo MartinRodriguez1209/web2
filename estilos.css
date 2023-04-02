@@ -1,0 +1,248 @@
+/* Estilos para la página principal */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #6b5b95;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: #6b5b95;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form input[type="text"] {
+  width: 75%;
+  margin-right: 10px;
+}
+
+form button {
+  background-color: #6b5b95;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #563d7c;
+}
+
+.products li {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.products a {
+  color: #333;
+  text-decoration: none;
+}
+
+.products h3 {
+  color: #6b5b95;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.products p {
+  margin-bottom: 5px;
+}
+
+.categories li {
+  margin-bottom: 10px;
+}
+
+.categories a {
+  color: #6b5b95;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #6b5b95;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.login {
+  margin-left: auto;
+}
+
+.login-button {
+  background-color: #6b5b95;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #563d7c;
+}
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #6b5b95;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.search-form {
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+
+.search-form button[type="submit"] {
+  background-color: #563d7c;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-form button:hover {
+  background-color: #6b5b95;
+}
+
+.login {
+  margin-left: auto;
+}
+
+.login-button {
+  background-color: #6b5b95;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #563d7c;
+}
+
+/* Estilos para el contenido */
+main {
+  padding: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
