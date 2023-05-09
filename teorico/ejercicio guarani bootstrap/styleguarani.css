@@ -1,0 +1,43 @@
+table {
+  margin-top: 3%;
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+td {
+  border-bottom: 1px solid #f2f2f2;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+input {
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+}

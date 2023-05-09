@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guarani</title>
+    <script src="scriptguarani_materias.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- barra de navegacion -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand m-lg-1" href="#">Sistema Guarani</a>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a id="boton_cargar_notas" class="nav-link" href="#">Cargar notas</a>
+        </li>
+        <li class="nav-item">
+          <a id="boton_cargar_materia" class="nav-link active" href="#"
+            >Cargar materias</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Formulario para la carga de notas -->
+
+    <div class="container mt-5">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label">Materia:</label>
+            <input type="text" id="materia" class="form-control" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label">Dia de la semana:</label>
+            <input type="text" id="dia" class="form-control" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label">Horario inicio:</label>
+            <input type="time" id="hora_inicio" class="form-control" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Horario final:</label>
+            <input type="time" id="hora_final" class="form-control" />
+          </div>
+        </div>
+      </form>
+      <button id="boton_materia" class="btn btn-primary mt-3">
+        Cargar materia
+      </button>
+    </div>
+
+    <!-- Tabla de materias -->
+
+    <div class="container">
+      <table id="tabla_materias" class="table">
+        <thead>
+          <tr>
+            <th scope="col">Materia</th>
+            <th scope="col">Dia</th>
+            <th scope="col">Hora inicio</th>
+            <th scope="col">Hora final</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>

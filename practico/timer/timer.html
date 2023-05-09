@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <div>
+      Limite: <input id="input-segundos" type="number" value="20" /> seg
+    </div>
+
+    <div>
+      Tiempo <span style="font-weight: bold" id="timer">10</span> segundos
+    </div>
+    <div>
+      <button id="btn-comenzar" onclick="comenzarTimer()">Comenzar</button>
+      <button id="btn-parar" onclick="reset()">Parar</button>
+    </div>
+  </body>
+
+  <script>
+    var id_interval = undefined;
+    var current_seg = 10;
+    var limite_seg = parseInt(document.getElementById("input-segundos").value);
+    function comenzarTimer() {
+      debugger;
+      var boton = document.getElementById("btn-comenzar");
+      boton.setAttribute("disabled", "disabled");
+      boton.innerHTML = "en curso";
+      this.id_interval = setInterval(function () {
+        if (current_seg >= limite_seg) {
+          this.reset();
+        } else {
+          this.sumar();
+        }
+      }, 1000);
+    }
+
+    function reset() {
+      var boton = document.getElementById("btn-comenzar");
+      var segundos = document.getElementById("timer");
+      boton.removeAttribute("disabled");
+      segundos.innerHTML = "0";
+      clearInterval(this.id_interval);
+    }
+
+    function sumar() {
+      var segundos = document.getElementById("timer");
+      var valor_actual = parseInt(segundos.innerHTML);
+      valor_actual = valor_actual + 1;
+      segundos.innerHTML = valor_actual;
+      current_seg = current_seg + 1;
+    }
+  </script>
+</html>

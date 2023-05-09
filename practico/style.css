@@ -29,7 +29,13 @@ body {
 .search_bar {
   margin: auto;
   width: 40vw;
+  height: 25px;
 }
+
+.buscar_button {
+  height: 26px;
+}
+
 .img {
   height: 3vw;
 }
@@ -56,8 +62,7 @@ body {
 .texto_botones_usuario {
   display: inline-block;
   color: #333;
-  font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif,
-    sans-serif;
+  font-family: "Proxima Nova", Arial, sans-serif, sans-serif;
   margin-left: 5px;
   text-align: center;
   vertical-align: top;
@@ -91,6 +96,12 @@ body {
   background-color: gainsboro;
   border-radius: 10px;
 }
+
+.medio_pago:hover {
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
 .icono_pago {
   width: 50px;
   margin-left: 20px;
@@ -105,14 +116,13 @@ body {
 }
 
 .div_cont_productos {
-  background-color: #fff159;
-  position: fixed;
+  position: absolute;
   top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-left: auto;
   white-space: nowrap;
-  padding: 10px;
+  padding: 5px;
   margin-right: auto;
   border-radius: 15px;
 }
@@ -124,6 +134,15 @@ body {
   width: 250px;
   height: 300px;
 }
+
+.div_producto:hover {
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.div_producto:hover h5 {
+  opacity: 1;
+}
+
 .a_cont_producto {
   display: flex;
   justify-content: center;
@@ -138,24 +157,32 @@ body {
 
 .cont_datos_producto {
   position: absolute;
+  width: 100%;
   margin-top: 100px;
 }
 .precio_producto {
-  font-size: 2em;
+  font-size: 1.7em;
   margin-top: 5px;
   color: black;
   padding-left: 10px;
   margin-left: 10px;
+  padding-top: 10px;
   margin: 0;
+  font-weight: 500;
+  text-align: left;
   margin-top: 50px;
+  font-family: "Roboto", sans-serif;
 }
 .nombre_producto {
   white-space: normal;
   top: 30px;
   color: grey;
   margin: 0;
+  opacity: 0;
   font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   padding: 8px;
+  text-align: left;
   margin-top: 1px;
 }

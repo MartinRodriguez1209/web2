@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guarani</title>
+    <link rel="stylesheet" href="styleguarani.css" />
+    <script src="scriptguarani.js" defer></script>
+  </head>
+  <body>
+    <h1>Sistema Guarani</h1>
+    <h3>Carga de notas</h3>
+    <form>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" /><br /><br />
+
+      <label for="dni">DNI:</label>
+      <input type="number" id="dni" name="dni" /><br /><br />
+
+      <label for="nota1">Nota primer parcial:</label>
+      <input type="number" id="nota1" name="nota1" /><br /><br />
+
+      <label for="nota2">Nota segundo parcial:</label>
+      <input type="number" id="nota2" name="nota2" /><br /><br />
+    </form>
+    <button id="boton_notas">Cargar notas</button>
+    <table id="tabla_notas">
+      <thead>
+        <tr>
+          <th>Apellido</th>
+          <th>DNI</th>
+          <th>Nota primer parcial</th>
+          <th>Nota segundo parcial</th>
+          <th>Promedio</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
