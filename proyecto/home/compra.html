@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style-home.css" />
+    <script src="script-home.js" defer></script>
+    <title>Pagar</title>
+  </head>
+  <body>
+    <!-- Cabecera de la pagina -->
+    <div id="overlay_login"></div>
+    <div class="main_header_cont">
+      <div class="logo_cont">
+        <a href="/proyecto/home/homebootstrap.html">
+          <img class="logo" src="/proyecto/multimedia/logo.png" alt=""
+        /></a>
+      </div>
+      <div class="titulo_cont"><h1>Hardware</h1></div>
+      <div class="cont_medio">
+        <div class="cont_search">
+          <input type="search" class="main_serch_bar hover" />
+          <input
+            type="button"
+            class="search_button default_button hover"
+            value="Buscar"
+          />
+        </div>
+        <div class="cont_buttons">
+          <div class="dropdown px-2">
+            <button
+              class="btn second_button dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Componentes
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">CPUs</a></li>
+              <li><a class="dropdown-item" href="#">GPUs</a></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/proyecto/home/listaproductos.html"
+                  >RAM</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown px-2">
+            <button
+              class="btn second_button dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Perifericos
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Mouses</a></li>
+              <li><a class="dropdown-item" href="#">Teclados</a></li>
+              <li><a class="dropdown-item" href="#">Auriculares</a></li>
+            </ul>
+          </div>
+          <div class="dropdown px-2">
+            <button
+              class="btn second_button dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Computadoras
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Notebooks</a></li>
+            </ul>
+          </div>
+          <div class="dropdown px-2">
+            <button
+              class="btn second_button dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Monitores
+            </button>
+            <ul class="dropdown-menu"></ul>
+          </div>
+          <div class="dropdown px-2">
+            <button
+              class="btn second_button dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Accesorios
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Mousepads</a></li>
+              <li><a class="dropdown-item" href="#">Cables</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cont_right">
+        <div class="cont_usr_buttons">
+          <a href="/proyecto/home/historialcompras.html">
+            <input
+              id="button_monitores"
+              type="button"
+              class="usr_button second_button hover"
+              value="Mis compras"
+          /></a>
+
+          <a href="/proyecto/home/perfilusuario.html">
+            <input
+              id="button_accesorios"
+              type="button"
+              class="usr_button second_button hover"
+              value="Perfil"
+          /></a>
+        </div>
+        <button
+          class="default_button login_button hover"
+          id="button_login"
+          value="Ingresar"
+        >
+          <img
+            src="/proyecto/multimedia/usuario.png"
+            class="usr_img"
+            alt="usrimg"
+          />
+          <p>Ingresar</p>
+        </button>
+        <a href="/proyecto/home/carrito.html" class="a_cart"
+          ><img src="/proyecto/multimedia/carro.png" class="img_cart" alt=""
+        /></a>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="card h-100">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="/proyecto/multimedia/ram.jpg"
+              class="card-img-top img-thumbnail w-50"
+              alt="Producto 1"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                Memoria GeiL DDR4 16GB 3000MHz Super Luce RGB Black
+              </h5>
+              <p class="card-text">Descripción del producto.</p>
+              <p class="card-price">Precio: $40.000</p>
+            </div>
+          </div>
+          <div class="col-10"></div>
+        </div>
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="/proyecto/multimedia/monitor.jpg"
+                class="card-img-top img-thumbnail w-50"
+                alt="Producto 1"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Monitor Samsung 22"</h5>
+                <p class="card-price">Precio: 59.999$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Número de Tarjeta</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cardNumber"
+              placeholder="1234 5678 9012 3456"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="cardName" class="form-label">Nombre del Titular</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cardName"
+              placeholder="Nombre Completo"
+              required
+            />
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="expiryDate" class="form-label"
+                >Fecha de Expiración</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="expiryDate"
+                placeholder="MM/AA"
+                required
+              />
+            </div>
+            <div class="col">
+              <label for="cvv" class="form-label">CVV</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cvv"
+                placeholder="123"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="billingAddress" class="form-label"
+              >Dirección de Facturación</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="billingAddress"
+              placeholder="Calle, Número, Ciudad"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="postalCode" class="form-label">Código Postal</label>
+            <input
+              type="text"
+              class="form-control"
+              id="postalCode"
+              placeholder="12345"
+              required
+            />
+          </div>
+          <h5 class="mt-2">Total: 101.999$</h5>
+          <button type="submit" class="btn btn-primary">Pagar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- modal login -->
+    <div class="modal_login modal" id="modal_login">
+      <div class="title_login_cont">
+        <h1 class="title_login">LOGIN</h1>
+      </div>
+      <form class="form_modal_login">
+        <label for="email">Email:</label><br /><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="password">Contraseña:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
+        <div class="forgot_password">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+        <div id="crear_cuenta_button" class="forgot_password">
+          <a href="#">Crear cuenta</a>
+        </div>
+        <input
+          type="button"
+          class="default_button login_button hover"
+          value="Iniciar sesión"
+        />
+      </form>
+    </div>
+
+    <div id="modal_registro" class="modal_registro modal">
+      <div class="title_login_cont">
+        <h1 class="title_login">Crear</h1>
+      </div>
+      <form class="form_modal_login">
+        <label for="email">Email:</label><br /><br />
+        <input
+          type="email"
+          id="email_crear"
+          name="email"
+          required
+        /><br /><br />
+        <label for="password">Contraseña:</label>
+        <input
+          type="password"
+          id="password_crear"
+          name="password"
+          required
+        /><br /><br />
+        <label for="password">Repetir contraseña:</label>
+        <input
+          type="password"
+          id="password_crear_repetir"
+          name="password"
+          required
+        /><br /><br />
+        <input
+          type="button"
+          class="default_button login_button hover"
+          value="Crear cuenta"
+        />
+      </form>
+    </div>
+  </body>
+</html>

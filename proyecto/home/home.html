@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style-home.css" />
     <script src="script-home.js" defer></script>
     <title>Document</title>
@@ -58,13 +65,13 @@
       <div class="cont_right">
         <div class="cont_usr_buttons">
           <input
-            id="button_monitores"
+            id="button_monitores_"
             type="button"
             class="usr_button second_button hover"
             value="Mis compras"
           />
           <input
-            id="button_accesorios"
+            id="button_accesorios_"
             type="button"
             class="usr_button second_button hover"
             value="Ayuda"
@@ -85,6 +92,76 @@
         <a href="" class="a_cart"
           ><img src="/proyecto/multimedia/carro.png" class="img_cart" alt=""
         /></a>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <ol class="carousel-indicators">
+              <li
+                data-bs-target="#myCarousel"
+                data-bs-slide-to="0"
+                class="active"
+              ></li>
+              <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+              <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner d-flex align-items-center">
+              <div class="carousel-item active">
+                <img
+                  src="/proyecto/multimedia/geforce-rtx-20-series-social-2048x1024.jpg"
+                  class="d-block w-100"
+                  alt="Imagen 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/proyecto/multimedia/Intel-Core-Gamer-Days-1-768x432.jpg"
+                  class="d-block w-100"
+                  alt="Imagen 2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/proyecto/multimedia/20190201-2.jpg"
+                  class="d-block w-100"
+                  alt="Imagen 2"
+                />
+              </div>
+            </div>
+
+            <!-- Controles -->
+            <a
+              class="carousel-control-prev"
+              href="#myCarousel"
+              role="button"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#myCarousel"
+              role="button"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 

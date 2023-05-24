@@ -48,7 +48,19 @@ button {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
 }
+.btn {
+  background-color: #f2f0e9;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: medium;
+}
 
+.btnvioleta {
+  background-color: #6a5078;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: medium;
+}
 .search_button {
   margin-left: 10px;
   height: 25%;
@@ -182,6 +194,20 @@ label {
   z-index: 9999;
 }
 
+.disable-scrollbars::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+h5 {
+  color: #6a5078;
+}
+
 .title_login_cont {
   position: inherit;
   width: 40%;
@@ -218,4 +244,42 @@ label {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.custom_icon {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+}
+
+.custom_icon::before {
+  content: "";
+}
+
+.carousel-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+}
+
+.carousel-vertical .carousel-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease;
+  transform: translateX(0);
+}
+
+.carousel-vertical {
+  overflow-y: hidden;
+}
+
+.carousel-vertical .carousel-item {
+  flex: 0 0 33.33%; /* Ajusta la altura de cada item según tus necesidades */
+}
+
+.carousel-vertical .carousel-control-prev,
+.carousel-vertical .carousel-control-next {
+  transform: translateX(-50%);
+  align-self: center;
 }
