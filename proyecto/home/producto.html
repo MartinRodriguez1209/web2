@@ -7,6 +7,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="producto.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style-home.css" />
     <link rel="stylesheet" href="/proyecto/css/font-awesome.min.css" />
@@ -14,140 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="script-header.js"></script>
     <script src="script-home.js" defer></script>
     <title>Producto</title>
   </head>
   <body>
     <!-- Cabecera de la pagina -->
     <div id="overlay_login"></div>
-    <div class="main_header_cont">
-      <div class="logo_cont">
-        <a href="/proyecto/home/homebootstrap.html">
-          <img class="logo" src="/proyecto/multimedia/logo.png" alt=""
-        /></a>
-      </div>
-      <div class="titulo_cont"><h1>Hardware</h1></div>
-      <div class="cont_medio">
-        <div class="cont_search">
-          <input type="search" class="main_serch_bar hover" />
-          <input
-            type="button"
-            class="search_button default_button hover"
-            value="Buscar"
-          />
-        </div>
-        <div class="cont_buttons">
-          <div class="dropdown px-2">
-            <button
-              class="btn second_button dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Componentes
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">CPUs</a></li>
-              <li><a class="dropdown-item" href="#">GPUs</a></li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/proyecto/home/listaproductos.html"
-                  >RAM</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown px-2">
-            <button
-              class="btn second_button dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Perifericos
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Mouses</a></li>
-              <li><a class="dropdown-item" href="#">Teclados</a></li>
-              <li><a class="dropdown-item" href="#">Auriculares</a></li>
-            </ul>
-          </div>
-          <div class="dropdown px-2">
-            <button
-              class="btn second_button dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Computadoras
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Notebooks</a></li>
-            </ul>
-          </div>
-          <div class="dropdown px-2">
-            <button
-              class="btn second_button dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Monitores
-            </button>
-            <ul class="dropdown-menu"></ul>
-          </div>
-          <div class="dropdown px-2">
-            <button
-              class="btn second_button dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Accesorios
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Mousepads</a></li>
-              <li><a class="dropdown-item" href="#">Cables</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="cont_right">
-        <div class="cont_usr_buttons">
-          <a href="/proyecto/home/historialcompras.html">
-            <input
-              id="button_monitores"
-              type="button"
-              class="usr_button second_button hover"
-              value="Mis compras"
-          /></a>
-
-          <a href="/proyecto/home/perfilusuario.html">
-            <input
-              id="button_accesorios"
-              type="button"
-              class="usr_button second_button hover"
-              value="Perfil"
-          /></a>
-        </div>
-        <button
-          class="default_button login_button hover"
-          id="button_login"
-          value="Ingresar"
-        >
-          <img
-            src="/proyecto/multimedia/usuario.png"
-            class="usr_img"
-            alt="usrimg"
-          />
-          <p>Ingresar</p>
-        </button>
-        <a href="/proyecto/home/carrito.html" class="a_cart"
-          ><img src="/proyecto/multimedia/carro.png" class="img_cart" alt=""
-        /></a>
-      </div>
-    </div>
 
     <!-- display del producto -->
 
@@ -159,8 +33,16 @@
               ><strong>Componentes</strong>
             </a>
           </li>
-          <li class="breadcrumb-item" aria-current="page">RAM</li>
-          <li class="breadcrumb-item active" aria-current="page">Asus</li>
+          <li
+            class="breadcrumb-item"
+            id="breadcrumb_tipo"
+            aria-current="page"
+          ></li>
+          <li
+            class="breadcrumb-item active"
+            id="breadcrumb_marca"
+            aria-current="page"
+          ></li>
         </ol>
       </nav>
       <div class="row">
@@ -168,43 +50,23 @@
           <div
             class="overflow-auto disable-scrollbars"
             style="max-height: 400px"
+            id="imagenes_contenedor"
           >
-            <img
-              src="/proyecto/multimedia/ram.jpg"
-              class="d-block img-thumbnail mb-3"
-              alt="Imagen 1"
-            />
-            <img
-              src="/proyecto/multimedia/ram.jpg"
-              class="d-block img-thumbnail mb-3"
-              alt="Imagen 2"
-            />
-            <img
-              src="/proyecto/multimedia/ram.jpg"
-              class="d-block img-thumbnail mb-3"
-              alt="Imagen 3"
-            />
             <!-- mas imagenes -->
           </div>
         </div>
         <div class="col-5">
-          <img src="/proyecto/multimedia/ram.jpg" alt="w-100" />
+          <img id="main_img" src="" alt="w-100" />
         </div>
         <div class="col">
           <div class="row row-cols-1">
             <div class="col">
-              <h2>Memoria GeiL DDR4 16GB 3000MHz Super Luce RGB Black</h2>
+              <h2 id="nombre_producto"></h2>
             </div>
             <div class="col"></div>
             <div class="col">
               <div class="row">
-                <div class="col-3">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star fa-star-half-empty"></span>
-                </div>
+                <div class="col-3" id="cont_clasificacion"></div>
                 <div class="col-2">
                   <img
                     src="/proyecto/multimedia/me-gusta.png"
@@ -215,8 +77,8 @@
               </div>
             </div>
             <div class="col">
-              <h3>42.000$</h3>
-              <p><strong>en 12x$3500</strong></p>
+              <h3 id="precio_producto"></h3>
+              <p><strong id="cuotas_producto"></strong></p>
               <p><strong>Envio gratis</strong></p>
             </div>
             <div class="col mt-5">
@@ -250,32 +112,15 @@
       <div class="row">
         <div class="col">
           <h4>Descripción:</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
-            pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum
-            placerat, sem sapien laoreet mauris, dictum porttitor lacus est nec
-            enim. Vivamus feugiat elit lorem, eu porttitor ante ultrices id.
-            Phasellus suscipit tellus ante, nec dignissim elit imperdiet nec.
-            Nullam fringilla feugiat nisl. Ut pretium, metus venenatis dictum
-            viverra, dui metus finibus enim, ac rhoncus sem lorem vitae mauris.
-            Suspendisse ut venenatis libero. Suspendisse lorem felis, pretium in
-            maximus id, tempor non ipsum.
-          </p>
+          <p id="descripcion_producto"></p>
         </div>
         <div class="col">
           <h4>Especificaciones:</h4>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-dot-circle">- Capacidad: 16 GB</i></li>
-            <li><i class="fas fa-dot-circle">- Velocidad: 3600 MHz</i></li>
-            <li><i class="fas fa-dot-circle">- Tipo: DDR4</i></li>
-            <li><i class="fas fa-dot-circle">- Cantidad de Memorias: 2</i></li>
-            <li><i class="fas fa-dot-circle">- Latencia: 18 CL</i></li>
-            <li><i class="fas fa-dot-circle">- Voltaje: 1.35 V</i></li>
-          </ul>
+          <ul id="lista_caracteristicas" class="list-unstyled"></ul>
         </div>
       </div>
     </div>
+
     <!-- modal login -->
     <div class="modal_login modal" id="modal_login">
       <div class="title_login_cont">
