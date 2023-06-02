@@ -1,3 +1,5 @@
+import * as service from "../utils/service.js";
+
 document.addEventListener("DOMContentLoaded", (event) => {
   const urlParams = new URLSearchParams(window.location.search);
   const tipoId = urlParams.get("tipoid");
@@ -5,8 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   cargarProductos(tipoId);
 
   async function cargarProductos(tipoId) {
-    var r = await fetch("http://localhost:3000/productos?tipoid=" + tipoId);
-    var listaProductos = await r.json();
+    var listaProductos = await service.getPostListaProductos(tipoId);
 
     let cards = [];
     for (let product of listaProductos) {
@@ -44,5 +45,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     `;
   }
 });
-
-document.addEventListener("click");

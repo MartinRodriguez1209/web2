@@ -9,9 +9,9 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style-home.css" />
-    <script src="script-header.js"></script>
+    <script type="module" src="script-header.js"></script>
     <script src="script-home.js" defer></script>
-    <script src="listaproductos.js"></script>
+    <script type="module" src="listaproductos.js"></script>
     <title>Lista</title>
   </head>
   <body>
@@ -85,71 +85,72 @@
             </div>
           </div>
         </div>
-        <div class="col-md-9" id="cards_container">
-      </div>
-    </div>
 
-    <!-- modal login -->
-    <div class="modal_login modal" id="modal_login">
-      <div class="title_login_cont">
-        <h1 class="title_login">LOGIN</h1>
+        <div class="col-md-9" id="cards_container"></div>
       </div>
-      <form class="form_modal_login">
-        <label for="email">Email:</label><br /><br />
-        <input type="email" id="email" name="email" required /><br /><br />
-        <label for="password">Contraseña:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-        /><br /><br />
-        <div class="forgot_password">
-          <a href="#">¿Olvidaste tu contraseña?</a>
-        </div>
-        <div id="crear_cuenta_button" class="forgot_password">
-          <a href="#">Crear cuenta</a>
-        </div>
-        <input
-          type="button"
-          class="default_button login_button hover"
-          value="Iniciar sesión"
-        />
-      </form>
-    </div>
 
-    <div id="modal_registro" class="modal_registro modal">
-      <div class="title_login_cont">
-        <h1 class="title_login">Crear</h1>
+      <!-- modal login -->
+      <div class="modal_login modal" id="modal_login">
+        <div class="title_login_cont">
+          <h1 class="title_login">LOGIN</h1>
+        </div>
+        <form class="form_modal_login">
+          <label for="email">Email:</label><br /><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          /><br /><br />
+          <div class="forgot_password">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div id="crear_cuenta_button" class="forgot_password">
+            <a href="#">Crear cuenta</a>
+          </div>
+          <input
+            type="button"
+            class="default_button login_button hover"
+            value="Iniciar sesión"
+          />
+        </form>
       </div>
-      <form class="form_modal_login">
-        <label for="email">Email:</label><br /><br />
-        <input
-          type="email"
-          id="email_crear"
-          name="email"
-          required
-        /><br /><br />
-        <label for="password">Contraseña:</label>
-        <input
-          type="password"
-          id="password_crear"
-          name="password"
-          required
-        /><br /><br />
-        <label for="password">Repetir contraseña:</label>
-        <input
-          type="password"
-          id="password_crear_repetir"
-          name="password"
-          required
-        /><br /><br />
-        <input
-          type="button"
-          class="default_button login_button hover"
-          value="Crear cuenta"
-        />
-      </form>
+
+      <div id="modal_registro" class="modal_registro modal">
+        <div class="title_login_cont">
+          <h1 class="title_login">Crear</h1>
+        </div>
+        <form class="form_modal_login">
+          <label for="email">Email:</label><br /><br />
+          <input
+            type="email"
+            id="email_crear"
+            name="email"
+            required
+          /><br /><br />
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            id="password_crear"
+            name="password"
+            required
+          /><br /><br />
+          <label for="password">Repetir contraseña:</label>
+          <input
+            type="password"
+            id="password_crear_repetir"
+            name="password"
+            required
+          /><br /><br />
+          <input
+            type="button"
+            class="default_button login_button hover"
+            value="Crear cuenta"
+          />
+        </form>
+      </div>
     </div>
   </body>
 </html>

@@ -1,48 +1,48 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idProducto = urlParams.get("id");
 cargarProducto(idProducto);
-
+import * as service from "../utils/service.js";
+import * as localeService from "../utils/locale-storage.js";
 async function cargarProducto(idProducto) {
-  var r = await fetch("http://localhost:3000/productos/" + idProducto);
-  var producto = await r.json();
+  try {
+    var producto = await service.getPostProducto(idProducto);
 
-  var mainImg = document.getElementById("main_img");
-  var nombreProducto = document.getElementById("nombre_producto");
-  var precioProducto = document.getElementById("precio_producto");
-  var cuotasProducto = document.getElementById("cuotas_producto");
-  var descripcionProducto = document.getElementById("descripcion_producto");
+    var mainImg = document.getElementById("main_img");
+    var nombreProducto = document.getElementById("nombre_producto");
+    var precioProducto = document.getElementById("precio_producto");
+    var cuotasProducto = document.getElementById("cuotas_producto");
+    var descripcionProducto = document.getElementById("descripcion_producto");
 
-  precioProducto.textContent = producto.precio.toLocaleString() + "$";
-  nombreProducto.textContent = producto.nombre;
-  mainImg.src = producto.imagenes[0];
-  cuotasProducto.textContent =
-    "En 12 x " + Math.floor(producto.precio / 12).toLocaleString();
-  descripcionProducto.textContent = producto.descripcion;
-  listaEspecificaciones(producto);
-  cargarImagenes(producto);
-  setClasificacion(producto.clasificacion);
-  cargarBreadcrumb(producto);
-  document
-    .getElementById("imagenes_contenedor")
-    .addEventListener("click", function (event) {
-      var target = event.target;
-      if (target.tagName === "IMG") {
-        mainImg.src = target.src;
-        console.log("Imagen clickeada: " + target.src);
-      }
-    });
+    precioProducto.textContent = producto.precio.toLocaleString() + "$";
+    nombreProducto.textContent = producto.nombre;
+    mainImg.src = producto.imagenes[0];
+    cuotasProducto.textContent =
+      "En 12 x " + Math.floor(producto.precio / 12).toLocaleString();
+    descripcionProducto.textContent = producto.descripcion;
+    listaEspecificaciones(producto);
+    cargarImagenes(producto);
+    setClasificacion(producto.clasificacion);
+    cargarBreadcrumb(producto);
+    document
+      .getElementById("imagenes_contenedor")
+      .addEventListener("click", function (event) {
+        var target = event.target;
+        if (target.tagName === "IMG") {
+          mainImg.src = target.src;
+          console.log("Imagen clickeada: " + target.src);
+        }
+      });
+  } catch (error) {}
 }
 
 async function cargarBreadcrumb(producto) {
-  var r = await fetch("http://localhost:3000/categorias");
-  var categorias = await r.json();
+  var categorias = await service.getPostCategorias();
+  var marcas = await service.getPostMarcas();
   var categoria = categorias.find((c) => c.id === producto.tipoid);
   if (categoria) {
     var breadCrumbCategoria = document.getElementById("breadcrumb_tipo");
     breadCrumbCategoria.textContent = categoria.nombre;
   }
-  r = await fetch("http://localhost:3000/marcas");
-  var marcas = await r.json();
   var marca = marcas.find((c) => c.id === producto.marcaid);
   if (marca) {
     var breadCrumbMarca = document.getElementById("breadcrumb_marca");
@@ -96,3 +96,11 @@ function setClasificacion(clasificacion) {
 
   contClasificacion.innerHTML = html;
 }
+
+document
+  .getElementById("button_agregar_carrito")
+  .addEventListener("click", function () {
+    localeService.agregarCarrito(parseInt(idProducto), 1);
+    console.log("se agrego al carrito");
+    console.log(localeService.getCarrito());
+  });
