@@ -32,11 +32,10 @@ async function loadTabla(idCategoria) {
       var button = document.createElement("button");
       button.textContent = "Editar";
       button.className = "btn btn-primary";
-      button.dataset.bsToggle = "modal";
-      button.dataset.bsTarget = "#editProductModal";
+      button.type = "button";
       button.dataset.productoId = producto.id;
       button.addEventListener("click", function (event) {
-        openEditProductModal(producto);
+        window.location.href = `http://127.0.0.1:5500/proyecto/admin/productedit.html?id=${event.target.dataset.productoId}`;
       });
       actionCell.appendChild(button);
     });
@@ -46,21 +45,8 @@ document.getElementById("sales-tab").addEventListener("click", function () {
   document.getElementById("products-control").style.display = "none";
   document.getElementById("sales-control").style.display = "block";
 });
-function openEditProductModal(producto) {
-  //aca se tiene que poder cambiar la descripcion, las caracteristicas y las imagenes y el precio
 
-  document.getElementById("editProductId").value = producto.id;
-  document.getElementById("editProductName").value = producto.nombre;
-  document.getElementById("editProductPrice").value = producto.precio;
-  // Llena los demás campos aquí.
-
-  // Muestra el modal.
-  var myModal = new bootstrap.Modal(
-    document.getElementById("editProductModal"),
-    {}
-  );
-  myModal.show();
-}
+// Escucha el evento 'hidden.bs.modal' para eliminar la capa de fondo
 
 async function setCategorias() {
   var categorias = await service.getPostCategorias();
@@ -75,4 +61,9 @@ async function setCategorias() {
   select.addEventListener("change", function () {
     loadTabla(parseInt(select.value));
   });
+}
+
+async function actualizarCampo(categoria, nuevoValor, id) {
+  console.log(categoria + "  " + nuevoValor + "  " + id);
+  /* service.updateProductoData(categoria, nuevoValor, id); */
 }

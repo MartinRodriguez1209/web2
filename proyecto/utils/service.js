@@ -120,3 +120,37 @@ export function showToast(message) {
     document.body.removeChild(toastElement);
   }, 3000);
 }
+
+//funcion para actualizar uno de los datos del producto
+export const updateProductoData = async (producto) => {
+  const response = await fetch(`${URL}productos/${producto.id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(producto),
+  });
+
+  if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+
+  return response.json();
+};
+
+export async function setPostCompra(compra) {
+  try {
+    const response = await fetch(URL + "compras", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(compra),
+    });
+
+    // Comprueba si la respuesta es correcta
+    if (!response.ok) {
+      throw new Error(`HTTP error ${response.status}`);
+    }
+
+    // Procesa y devuelve la respuesta
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error(`Error al guardar la compra: ${err}`);
+  }
+}
