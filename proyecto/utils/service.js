@@ -222,3 +222,17 @@ export async function updateEstadoCompra(idCompra, nuevoEstado) {
     throw error;
   }
 }
+
+export async function getHomeInfo() {
+  try {
+    const r = await fetch(URL + "home");
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    }
+    var home = await r.json();
+    return home;
+  } catch (error) {
+    showToast("Error al obtener el home: " + error.message);
+    throw error;
+  }
+}

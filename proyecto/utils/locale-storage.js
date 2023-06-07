@@ -1,6 +1,4 @@
 export function loginUser(user) {
-  console.log("localestorage: " + user);
-
   localStorage.setItem("currentUser", JSON.stringify(user));
 }
 

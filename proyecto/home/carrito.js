@@ -16,13 +16,13 @@ async function addCardHTML(productoCarrito) {
   let cardElement = document.createElement("div");
   cardElement.innerHTML = cardHTML;
 
-  // Busca el botón dentro de la tarjeta y agrega un evento de click.
+  // busca el botón dentro de la tarjeta y agrega un evento de click.
   let button = cardElement.querySelector(".remove-button");
   button.addEventListener("click", () => {
     removerDelCarrito(producto.id);
   });
   calcularTotal(producto.precio * productoCarrito.cantidad);
-  // Añade la tarjeta al contenedor.
+  // añade la tarjeta al contenedor.
   cardContainer.appendChild(cardElement);
 }
 
@@ -61,10 +61,10 @@ function calcularTotal(precio) {
 async function actualizarCarrito() {
   let carrito = service.getCarrito();
   let cardContainer = document.getElementById("carrito_card_cont");
-  // Elimina todas las tarjetas existentes.
+  // elimina todas las tarjetas existentes.
   precioTotalValue = 0;
   cardContainer.innerHTML = "";
-  // Añade las tarjetas del carrito actualizado.
+  // añade las tarjetas del carrito actualizado.
   for (let productoCarrito of carrito) {
     await addCardHTML(productoCarrito);
   }

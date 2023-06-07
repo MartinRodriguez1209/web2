@@ -30,6 +30,8 @@ function checkUser() {
           .getElementById("login_modal_button")
           .classList.remove("visually-hidden");
         document.getElementById("button_user").classList.add("visually-hidden");
+        window.location.href =
+          "http://127.0.0.1:5500/proyecto/home/homebootstrap.html";
       });
   } catch (error) {
     console.log(error);
@@ -37,13 +39,12 @@ function checkUser() {
 }
 
 async function loadHeader() {
-  // Cargar la cabecera
+  // cargar la cabecera
   const response = await fetch("header.html");
   const data = await response.text();
 
   // Actualizar el DOM y esperar a que se complete
   document.body.insertAdjacentHTML("afterbegin", data);
-  await new Promise(requestAnimationFrame);
 }
 function initHomeScript() {
   var botonLogin = document.getElementById("button_login");
@@ -57,8 +58,9 @@ function initHomeScript() {
         );
         localeService.loginUser(user);
         checkUser();
-        var modal = new bootstrap.Modal(document.getElementById("loginModal"));
+        var modal = document.getElementById("loginModal");
         modal.hide();
+        window.location.reload();
         console.log(user.nombre);
       } catch (error) {}
     } else {

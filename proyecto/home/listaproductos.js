@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     let cardsRowHTML = "";
     for (let i = 0; i < cards.length; i += 2) {
-      let rowContent = cards.slice(i, i + 2).join("");
-      cardsRowHTML += `<div class="row justify-content-center mt-4 mb-4">${rowContent}</div>`;
+      let rowContenido = cards.slice(i, i + 2).join("");
+      cardsRowHTML += `<div class="row justify-content-center mt-4 mb-4">${rowContenido}</div>`;
     }
 
     cardsContainer.innerHTML = cardsRowHTML;
