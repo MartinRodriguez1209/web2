@@ -6,14 +6,16 @@ console.log(ventas);
 
 const listadoProductos = service.getPostProductoCompleto();
 
-function generarFilasVentas(ventas) {
+async function generarFilasVentas(ventas) {
   let filas = "";
   for (let venta of ventas) {
+    var usuarioNombre = await service.getUsreById(parseInt(venta.userId));
+    usuarioNombre = usuarioNombre[0].nombre;
     filas += `
         <tr>
         <tr>
         <td>${venta.id}</td>
-        <td>${venta.userId}</td>
+        <td>${usuarioNombre}</td>
         <td><button class="btn btn-primary"  data-id-venta="${venta.id}">Ver Detalle</button></td>
         <td>${venta.precioTotal}</td>
         <td>
@@ -33,7 +35,7 @@ function generarFilasVentas(ventas) {
   return filas;
 }
 
-tbody.innerHTML = generarFilasVentas(ventas);
+tbody.innerHTML = await generarFilasVentas(ventas);
 const botones = document.querySelectorAll(".btn.btn-primary");
 for (let boton of botones) {
   boton.addEventListener("click", async function (event) {
@@ -83,7 +85,8 @@ dropdownItems.forEach((item) => {
 });
 
 async function generarDetalleVenta(venta) {
-  let detalle = "";
+  let detalle = `Direccion de envio: ${venta.direccionEnvio}<br/>`;
+
   for (let producto of venta.carritoDeCompra) {
     let detalleProducto = await service.getPostProducto(producto.productoId);
 

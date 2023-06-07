@@ -77,6 +77,35 @@ export async function getUser(mail, contrasenia) {
   }
 }
 
+export async function getUsreById(userId) {
+  try {
+    var r = await fetch(URL + "usuarios?id=" + userId);
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    }
+    var usuario = await r.json();
+    return usuario;
+  } catch (error) {
+    showToast("Error al obtener producto: " + error.message);
+    throw error;
+  }
+}
+
+export async function postNuevoProducto(producto) {
+  const response = await fetch("http://localhost:3000/productos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(producto),
+  });
+  if (response.ok) {
+    return user;
+  }
+
+  throw new Error(`HTTP error! status: ${response.status}`);
+}
+
 export async function createUser(email, password, nombre) {
   var user = { email: email, password: password, nombre: nombre };
 
@@ -89,7 +118,7 @@ export async function createUser(email, password, nombre) {
   });
 
   if (response.ok) {
-    return user;
+    return response;
   }
 
   throw new Error(`HTTP error! status: ${response.status}`);
