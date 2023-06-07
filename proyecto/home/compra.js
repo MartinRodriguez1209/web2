@@ -62,7 +62,15 @@ async function realizarPago(event) {
   event.preventDefault(); // Aseguramos que el formulario no se envíe automáticamente.
   const formPago = document.getElementById("form_pago");
   var datos = new FormData(formPago);
+  var user = service.checkUser();
   var pagoInfo = Object.fromEntries(datos);
   pagoInfo.carritoDeCompra = carrito;
+  pagoInfo.precioTotal = precioTotalValue;
+  pagoInfo.userId = user.id;
+  pagoInfo.fechaDeCompra = jsonService.fechaActual();
+  pagoInfo.estadoDeCompra = "En proceso";
   jsonService.setPostCompra(pagoInfo);
+  service.vaciarCarrito();
+  document.location.href =
+    "http://127.0.0.1:5500/proyecto/home/historialcompras.html";
 }

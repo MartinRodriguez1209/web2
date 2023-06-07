@@ -18,6 +18,19 @@ export async function getPostProducto(idProducto) {
     throw error;
   }
 }
+export async function getPostProductoCompleto() {
+  try {
+    var r = await fetch(URL + "productos");
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    }
+    var producto = await r.json();
+    return producto;
+  } catch (error) {
+    showToast("Error al obtener producto: " + error.message);
+    throw error;
+  }
+}
 
 export async function getPostMarcas() {
   try {
@@ -152,5 +165,60 @@ export async function setPostCompra(compra) {
     return data;
   } catch (err) {
     console.error(`Error al guardar la compra: ${err}`);
+  }
+}
+
+export function fechaActual() {
+  let fecha = new Date();
+  let dia = String(fecha.getDate()).padStart(2, "0");
+  let mes = String(fecha.getMonth() + 1).padStart(2, "0");
+  let año = fecha.getFullYear();
+  return `${dia}/${mes}/${año.toString().substr(-2)}`;
+}
+
+export async function getHistorialCompras(userId) {
+  try {
+    const r = await fetch(URL + "compras?userId=" + userId);
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    }
+    var historial = await r.json();
+    return historial;
+  } catch (error) {
+    showToast("Error al obtener el historial de compras: " + error.message);
+    throw error;
+  }
+}
+
+export async function getHistorialComprasCompleto() {
+  try {
+    const r = await fetch(URL + "compras");
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    }
+    var historial = await r.json();
+    return historial;
+  } catch (error) {
+    showToast("Error al obtener el historial de compras: " + error.message);
+    throw error;
+  }
+}
+
+export async function updateEstadoCompra(idCompra, nuevoEstado) {
+  try {
+    const compra = { estadoDeCompra: nuevoEstado };
+    const r = await fetch(`${URL}compras/${idCompra}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(compra),
+    });
+
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    } else {
+    }
+  } catch (error) {
+    showToast("Error al obtener el historial de compras: " + error.message);
+    throw error;
   }
 }

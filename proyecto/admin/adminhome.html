@@ -31,42 +31,34 @@
     <div class="container mt-4" id="products-control" style="display: none">
       <h1>Control de Productos</h1>
       <label for="categoryFilter">Filtrar por categoría:</label>
-      <select class="form-select mb-3" id="categoryFilter">
-        <!-- Aquí puedes agregar las categorías -->
-      </select>
+      <select class="form-select mb-3" id="categoryFilter"></select>
       <table class="table" id="products-table">
         <thead>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Categoría</th>
             <th scope="col">Precio</th>
-            <th scope="col">Acciones</th>
           </tr>
         </thead>
-        <tbody id="products-body">
-          <!-- Los productos se insertarán aquí -->
-        </tbody>
+        <tbody id="products-body"></tbody>
       </table>
     </div>
     <div class="container mt-4" id="sales-control" style="display: none">
       <h1>Control de Ventas</h1>
+      <div id="modalContainer"></div>
       <table class="table">
         <thead>
           <tr>
             <th scope="col">ID de Venta</th>
-            <th scope="col">ID de Producto</th>
-            <th scope="col">Cantidad</th>
+            <th scope="col">ID usuario</th>
+            <th scope="col">ID de Productos</th>
             <th scope="col">Total</th>
+            <th scope="col">Estado</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Las ventas se insertarán aquí -->
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-
-    <!-- modal para editar producto -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="admin.js"></script>

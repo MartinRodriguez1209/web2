@@ -25,6 +25,7 @@ function checkUser() {
       .getElementById("button_cerrar_sesion")
       .addEventListener("click", function () {
         localeService.logoutUser();
+        localeService.vaciarCarrito();
         document
           .getElementById("login_modal_button")
           .classList.remove("visually-hidden");

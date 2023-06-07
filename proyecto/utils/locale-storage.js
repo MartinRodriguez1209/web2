@@ -48,3 +48,7 @@ export function borrarProductoCarrito(productoId) {
 export function getCarrito() {
   return JSON.parse(localStorage.getItem("carrito")) || [];
 }
+
+export function vaciarCarrito() {
+  localStorage.removeItem("carrito");
+}
