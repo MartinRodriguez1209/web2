@@ -6,6 +6,8 @@ console.log(ventas);
 
 const listadoProductos = service.getPostProductoCompleto();
 
+nuevoProducto();
+
 async function generarFilasVentas(ventas) {
   let filas = "";
   for (let venta of ventas) {
@@ -94,13 +96,25 @@ async function generarDetalleVenta(venta) {
   }
   return detalle;
 }
+document.getElementById("products-tab").addEventListener("click", function () {
+  document.getElementById("products-control").style.display = "block";
+  document.getElementById("new-product-control").style.display = "none";
+  document.getElementById("sales-control").style.display = "none";
+});
 
 document
-  .getElementById("products-tab")
-  .addEventListener("click", async function () {
-    document.getElementById("products-control").style.display = "block";
+  .getElementById("new-product-tab")
+  .addEventListener("click", function () {
+    document.getElementById("new-product-control").style.display = "block";
+    document.getElementById("products-control").style.display = "none";
     document.getElementById("sales-control").style.display = "none";
   });
+
+document.getElementById("sales-tab").addEventListener("click", function () {
+  document.getElementById("sales-control").style.display = "block";
+  document.getElementById("new-product-control").style.display = "none";
+  document.getElementById("products-control").style.display = "none";
+});
 setCategorias();
 
 async function loadTabla(idCategoria) {
@@ -136,10 +150,6 @@ async function loadTabla(idCategoria) {
     });
   }
 }
-document.getElementById("sales-tab").addEventListener("click", function () {
-  document.getElementById("products-control").style.display = "none";
-  document.getElementById("sales-control").style.display = "block";
-});
 
 async function setCategorias() {
   var categorias = await service.getPostCategorias();
@@ -154,4 +164,71 @@ async function setCategorias() {
   select.addEventListener("change", function () {
     loadTabla(parseInt(select.value));
   });
+}
+
+async function nuevoProducto() {
+  loadDropdowns();
+
+  async function loadDropdowns() {
+    const marcas = await service.getPostMarcas();
+    const tipos = await service.getPostCategorias();
+
+    const marcaDropdown = document.getElementById("marca_dropdownt");
+    const tipoDropdown = document.getElementById("tipo_dropdownt");
+
+    marcaDropdown.innerHTML = "";
+    tipoDropdown.innerHTML = "";
+
+    for (let marca of marcas) {
+      let option = document.createElement("option");
+      option.value = marca.id;
+      option.text = marca.nombre;
+      marcaDropdown.add(option);
+    }
+
+    for (let tipo of tipos) {
+      let option = document.createElement("option");
+      option.value = tipo.id;
+      option.text = tipo.nombre;
+      tipoDropdown.add(option);
+    }
+  }
+
+  // Escuchar el evento submit del formulario
+  document
+    .getElementById("product_form")
+    .addEventListener("submit", function (event) {
+      // Prevenir el comportamiento por defecto del formulario
+      event.preventDefault();
+
+      // Leer los valores de los campos de entrada
+      const clasificacion = document.getElementById("clasificacionInput").value;
+      const nombre = document.getElementById("nombreInput").value;
+      const marcaid = document.getElementById("marca_dropdownt").value;
+      const tipoid = document.getElementById("tipo_dropdownt").value;
+      const descripcion = document.getElementById("descripcionInput").value;
+      const caracteristicas = document
+        .getElementById("caracteristicasInput")
+        .value.split("\n");
+      const precio = document.getElementById("precioInput").value;
+      const imagenes = document
+        .getElementById("imagenesInput")
+        .value.split("\n");
+
+      // Crear el objeto producto
+      const producto = {
+        clasificacion,
+        nombre,
+        marcaid,
+        tipoid,
+        descripcion,
+        caracteristicas,
+        precio,
+        imagenes,
+      };
+
+      service.postNuevoProducto(producto);
+      console.log(producto);
+      document.getElementById("product_form").reset();
+    });
 }

@@ -38,12 +38,12 @@ async function cargarProducto(idProducto) {
 async function cargarBreadcrumb(producto) {
   var categorias = await service.getPostCategorias();
   var marcas = await service.getPostMarcas();
-  var categoria = categorias.find((c) => c.id === producto.tipoid);
+  var categoria = categorias.find((c) => c.id === parseInt(producto.tipoid));
   if (categoria) {
     var breadCrumbCategoria = document.getElementById("breadcrumb_tipo");
     breadCrumbCategoria.textContent = categoria.nombre;
   }
-  var marca = marcas.find((c) => c.id === producto.marcaid);
+  var marca = marcas.find((c) => c.id === parseInt(producto.marcaid));
   if (marca) {
     var breadCrumbMarca = document.getElementById("breadcrumb_marca");
     breadCrumbMarca.textContent = marca.nombre;

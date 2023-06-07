@@ -7,7 +7,16 @@
         "/proyecto/multimedia/20190201-2.jpg",
         "https://www.precio-calidad.com.ar/wp-content/uploads/2023/03/ASUS-MONITORES-1920X500.jpg"
       ],
-      "idProductosDestacados": [1, 3, 5, 7, 2, 4, 6, 8]
+      "idProductosDestacados": [
+        1,
+        3,
+        5,
+        7,
+        2,
+        4,
+        6,
+        8
+      ]
     }
   ],
   "categorias": [
@@ -280,6 +289,56 @@
         "/proyecto/multimedia/ram/ram-kingston1.jpg",
         "/proyecto/multimedia/ram/ram-kingston3.jpg"
       ]
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "teclado",
+      "marcaid": "5",
+      "tipoid": "1",
+      "descripcion": "Un teclado moderno",
+      "caracteristicas": [
+        "Teclado ",
+        "Mecanico"
+      ],
+      "precio": "15000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_775176-MLA50158986097_062022-O.webp"
+      ],
+      "id": 10
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "Mouse",
+      "marcaid": "3",
+      "tipoid": "5",
+      "descripcion": "un mouse ",
+      "caracteristicas": [
+        "mouse",
+        "cable de 2 mts"
+      ],
+      "precio": "10000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_744609-MLA32854739285_112019-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_773480-MLA42361716768_062020-O.webp"
+      ],
+      "id": 11
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "Mouse 2 ",
+      "marcaid": "1",
+      "tipoid": "5",
+      "descripcion": "Mouse 2 ",
+      "caracteristicas": [
+        "mouse",
+        "cable 3 mts",
+        "inalambrico"
+      ],
+      "precio": "18000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_885723-MLA43269505359_082020-O.webp"
+      ],
+      "id": 12
     }
   ],
   "usuarios": [
