@@ -7,16 +7,7 @@
         "/proyecto/multimedia/20190201-2.jpg",
         "https://www.precio-calidad.com.ar/wp-content/uploads/2023/03/ASUS-MONITORES-1920X500.jpg"
       ],
-      "idProductosDestacados": [
-        1,
-        3,
-        5,
-        7,
-        2,
-        4,
-        6,
-        8
-      ]
+      "idProductosDestacados": [1, 3, 5, 7, 2, 4, 6, 8]
     }
   ],
   "categorias": [
@@ -51,7 +42,8 @@
     {
       "id": 8,
       "nombre": "notebooks"
-    }
+    },
+    { "id": 9, "nombre": "mousepad" }
   ],
   "marcas": [
     {
@@ -484,6 +476,27 @@
     },
     {
       "clasificacion": "5",
+      "nombre": "Mouse Pad HyperX Speed",
+      "marcaid": "6",
+      "tipoid": "9",
+      "descripcion": "Calidad en su confección \n\nDiseñada con materiales de calidad, tu almohadilla de goma, tela te dará una agradable sensación al tacto y evitará un gran desgaste en la base de tu mouse. Este tipo de opción es ideal para gamers ya que reparte la presión de manera simétrica, conservando un nivel de precisión adecuado.",
+      "caracteristicas": [
+        "Tamaño del mouse pad: M.",
+        "Color: negro y rojo.",
+        "Tiene 360mm de largo y su ancho es de 300mm",
+        "Es antideslizante.",
+        "Su grosor es de 3mm."
+      ],
+      "precio": "15000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_914544-MLA41164429753_032020-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_976088-MLA41164429768_032020-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_747815-MLU70030970441_062023-O.webp"
+      ],
+      "id": 19
+    },
+    {
+      "clasificacion": "5",
       "nombre": "Monitor Asus  VA27EHE led 27\"",
       "marcaid": "2",
       "tipoid": "7",
@@ -500,7 +513,7 @@
         "https://http2.mlstatic.com/D_NQ_NP_665931-MLA45212708615_032021-O.webp",
         "https://http2.mlstatic.com/D_NQ_NP_689498-MLA45212724396_032021-O.webp"
       ],
-      "id": 19
+      "id": 20
     }
   ],
   "usuarios": [

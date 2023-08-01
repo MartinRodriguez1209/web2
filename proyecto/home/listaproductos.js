@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const cardsContainer = document.getElementById("cards_container");
   cargarProductos(tipoId, tipoFiltroMarca);
   cargarFiltroMarcas();
-
+  cargarBreadcrumb(tipoId);
   async function cargarProductos(tipoId, tipoFiltroMarca) {
     let listaProductos;
     let cardsRowHTML = "";
@@ -85,5 +85,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
       }
       filtro.appendChild(listItem);
     });
+  }
+  async function cargarBreadcrumb(tipoid) {
+    var categorias = await service.getPostCategorias();
+    var marcas = await service.getPostMarcas();
+    var categoria = categorias.find((c) => c.id === parseInt(tipoid));
+    console.log("assadf");
+    if (categoria) {
+      var breadCrumbCategoria = document.getElementById("breadcrumb_text");
+      console.log(categoria.nombre);
+      breadCrumbCategoria.textContent = categoria.nombre;
+    }
+    var marca = marcas.find((c) => c.id === parseInt(marcaid));
+    if (marca) {
+      var breadCrumbMarca = document.getElementById("breadcrumb_marca");
+      breadCrumbMarca.textContent = marca.nombre;
+    }
   }
 });
