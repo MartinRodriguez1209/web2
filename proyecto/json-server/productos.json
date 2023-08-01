@@ -49,7 +49,8 @@
       "nombre": "Monitores"
     },
     {
-      "id": 8
+      "id": 8,
+      "nombre": "notebooks"
     }
   ],
   "marcas": [
@@ -71,7 +72,19 @@
     },
     {
       "id": 5,
-      "nombre": "Kingston "
+      "nombre": "Kingston"
+    },
+    {
+      "id": 6,
+      "nombre": "HyperX"
+    },
+    {
+      "id": 7,
+      "nombre": "Logitech"
+    },
+    {
+      "id": 8,
+      "nombre": "Intel"
     }
   ],
   "productos": [
@@ -292,53 +305,202 @@
     },
     {
       "clasificacion": "4",
-      "nombre": "teclado",
-      "marcaid": "5",
+      "nombre": "Teclado bluetooth Logitech K380",
+      "marcaid": "7",
       "tipoid": "1",
-      "descripcion": "Un teclado moderno",
+      "descripcion": "Innovadores en diseño y tecnología, Logitech se encarga de brindar la mejor experiencia de uso para sus usuarios. Sus teclados resaltan por ser resistentes y muy de buena calidad, por lo que podrás disfrutarlos por un largo tiempo.",
       "caracteristicas": [
-        "Teclado ",
-        "Mecanico"
+        "Conectividad con múltiples dispositivos.",
+        "Con conector Bluetooth.",
+        "Medidas: 279mm de ancho, 124mm de alto y 16mm de profundidad."
       ],
-      "precio": "15000",
+      "precio": "26000",
       "imagenes": [
-        "https://http2.mlstatic.com/D_NQ_NP_775176-MLA50158986097_062022-O.webp"
+        "https://http2.mlstatic.com/D_NQ_NP_948839-MLA46869223637_072021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_678595-MLA46869277088_072021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_891440-MLA46869277092_072021-O.webp"
       ],
       "id": 10
     },
     {
       "clasificacion": "4",
-      "nombre": "Mouse",
-      "marcaid": "3",
+      "nombre": "Mouse Corsair Champion Series Sabre",
+      "marcaid": "4",
       "tipoid": "5",
-      "descripcion": "un mouse ",
+      "descripcion": "Mejora tu experiencia de juego con el mouse gamer Corsair Champion Series Sabre RGB Pro en color negro. Este mouse cuenta con un sensor óptico PixArt PAW3392 de alta precisión, que te permite ajustar la resolución hasta 18000 dpi para un control y seguimiento excepcional en tus partidas. Además, su diseño ergonómico garantiza comodidad durante largas sesiones de juego, permitiéndote mantener un rendimiento óptimo.\n\nCon 6 botones personalizables, podrás configurar tus acciones favoritas y tenerlas al alcance de tus dedos. La rueda de desplazamiento te brinda una navegación rápida y precisa, ideal para cambiar de arma o desplazarte por el mapa con facilidad. Gracias a su conexión por cable USB, disfrutarás de una respuesta inmediata y sin interrupciones, asegurando que tus movimientos sean siempre precisos y rápidos.",
       "caracteristicas": [
-        "mouse",
-        "cable de 2 mts"
+        "Sensor óptico PixArt PAW3392 de alta precisión para un control excepcional.",
+        "Resolución ajustable hasta 18000 dpi.",
+        "Conexión por cable USB."
       ],
-      "precio": "10000",
+      "precio": "37000",
       "imagenes": [
-        "https://http2.mlstatic.com/D_NQ_NP_744609-MLA32854739285_112019-O.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_773480-MLA42361716768_062020-O.webp"
+        "https://http2.mlstatic.com/D_NQ_NP_674421-MLA48051618182_102021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_782142-MLA48051579242_102021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_645203-MLA48051618179_102021-O.webp"
       ],
       "id": 11
     },
     {
       "clasificacion": "4",
-      "nombre": "Mouse 2 ",
-      "marcaid": "1",
+      "nombre": "Mouse Logitech Pro Series G  ",
+      "marcaid": "7",
       "tipoid": "5",
-      "descripcion": "Mouse 2 ",
+      "descripcion": "Sumérgete en el mundo de los videojuegos con el mouse gamer Logitech Pro Series G Pro Hero en color negro. Diseñado especialmente para gamers, este mouse cuenta con un sensor óptico Hero 25K de alta precisión que te permitirá apuntar y moverte con total fluidez y exactitud. Con sus 25600 dpi de resolución, no habrá enemigo que se te escape. Además, sus 6 botones te brindarán un control total y personalizable para que puedas adaptarlo a tus necesidades y estilo de juego. El cable de 2.1 metros de largo te proporcionará la libertad de movimiento que necesitas para disfrutar de tus partidas sin restricciones. Y por si fuera poco, la rueda de desplazamiento te permitirá navegar por tus menús y opciones de manera rápida y cómoda. No esperes más y lleva tu experiencia gamer al siguiente nivel con el mouse Logitech G Pro Hero.",
       "caracteristicas": [
-        "mouse",
-        "cable 3 mts",
-        "inalambrico"
+        "Sensor óptico Hero 25K para máxima precisión en tus juegos",
+        "Resolución de 25600 dpi para un control total y exactitud",
+        "6 botones personalizables para adaptarse a tu estilo de juego",
+        "Cable de 2.1 m para mayor libertad de movimiento"
       ],
-      "precio": "18000",
+      "precio": "34999",
       "imagenes": [
-        "https://http2.mlstatic.com/D_NQ_NP_885723-MLA43269505359_082020-O.webp"
+        "https://http2.mlstatic.com/D_NQ_NP_682215-MLA45464806761_042021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_821782-MLA45464838711_042021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_915139-MLU70065184965_062023-O.webp"
       ],
       "id": 12
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "Teclado  Corsair K55",
+      "marcaid": "4",
+      "tipoid": "1",
+      "descripcion": "Corsair es un fabricante mundial de equipos y tecnología de alto rendimiento. Sus productos van dirigidos a jugadores, creadores de contenido y diseñadores. A su vez, con sus teclados podrás conseguir un óptimo desempeño al darle un uso intensivo.\n\nDistinción a todo color\nSu retroiluminación le da un toque diferente a tu equipo y resalta su composición cuando es utilizado en espacios poco iluminados.\n\nTecnología antighosting\nEste dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo.",
+      "caracteristicas": [
+        "Ergonómico y apto para diversos usos.",
+        "Contiene teclado numérico.",
+        "Medidas: 480.2mm de ancho, 166.3mm de alto y 34.6mm de profundidad."
+      ],
+      "precio": "31000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_888813-MLU70044864038_062023-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_964964-MLA32721999086_102019-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_648250-MLU70064684683_062023-O.webp"
+      ],
+      "id": 13
+    },
+    {
+      "clasificacion": "5",
+      "nombre": "Teclado HyperX Alloy Origins ",
+      "marcaid": "6",
+      "tipoid": "1",
+      "descripcion": "Este teclado HyperX de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo. Podrás mejorar tu experiencia de gaming, ya seas un aficionado o todo un experto y hacer que tus jugadas alcancen otro nivel.",
+      "caracteristicas": [
+        "Switch HyperX Red",
+        "Con conector USB-C.",
+        "Medidas: 442.5mm de ancho, 132.5mm de alto y 36.39mm de profundidad.",
+        "Con cable removible."
+      ],
+      "precio": "59999",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_799942-MLA42138475540_062020-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_879019-MLA42138386645_062020-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_907493-MLA42138386649_062020-O.webp"
+      ],
+      "id": 14
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "Mouse HyperX Pulsefire Surge",
+      "marcaid": "6",
+      "tipoid": "5",
+      "descripcion": "Sumérgete en el mundo de los videojuegos con el mouse gamer HyperX Pulsefire Surge en color negro. Este mouse cuenta con un sensor óptico PixArt 3389 de alta precisión y una resolución de 16000 dpi, lo que te permitirá apuntar y moverte con gran exactitud en tus partidas. Además, su velocidad máxima de 450 ips te brindará una respuesta rápida y fluida en todo momento.\n\nEl HyperX Pulsefire Surge es compatible con una amplia variedad de sistemas operativos, incluyendo Windows 7, Windows 8, Windows 8.1, Windows 10, PS4, PS5, Xbox One, Xbox Series X y Xbox Series S. Esto significa que podrás disfrutar de una experiencia de juego excepcional en diferentes plataformas.\n\nEste mouse gamer cuenta con 6 botones programables, lo que te permitirá personalizar tus acciones y comandos según tus preferencias. Además, su rueda de desplazamiento te facilitará la navegación por tus menús y opciones de juego.\n\nEl diseño ergonómico del HyperX Pulsefire Surge te proporcionará comodidad durante largas sesiones de juego, evitando la fatiga en tus manos. Su cable de 1.8 metros de largo te brindará la libertad de movimiento que necesitas para jugar cómodamente.\n\nNo esperes más para mejorar tu experiencia de juego con el mouse gamer HyperX Pulsefire Surge. ¡Adquiérelo ahora y lleva tus habilidades al siguiente nivel!",
+      "caracteristicas": [
+        "Sensor óptico PixArt 3389 de alta precisión para apuntar con exactitud.",
+        "6 botones programables para personalizar tus acciones.",
+        "Cable de 1.8 m.",
+        "Diseño ergonómico."
+      ],
+      "precio": "30000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_746377-MLU70010183190_062023-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_845329-MLU70010183184_062023-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_760141-MLA32146296703_092019-O.webp"
+      ],
+      "id": 15
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "Intel Core i7 i7-10700 BX8070110700",
+      "marcaid": "8",
+      "tipoid": "2",
+      "descripcion": "Mejora tu experiencia de juego con el procesador Intel Core i7-10700, diseñado especialmente para gamers. Con sus 8 núcleos y 16 hilos, este potente procesador te permitirá disfrutar de tus juegos favoritos sin interrupciones ni demoras. Gracias a su frecuencia máxima de 4.8 GHz, podrás obtener un rendimiento óptimo en tus partidas y aplicaciones más exigentes. Además, es compatible con memoria RAM DDR4, lo que te brinda mayor velocidad y eficiencia en el uso de tus recursos. La arquitectura x86-64 garantiza un funcionamiento estable y seguro, mientras que la litografía de 14 nm asegura un menor consumo de energía y una mayor durabilidad. Con el procesador gráfico Intel UHD Graphics 630 integrado, podrás disfrutar de imágenes nítidas y fluidas en resolución 4K. Además, la tecnología hyper-threading te permitirá realizar múltiples tareas de manera simultánea sin afectar el rendimiento de tu equipo. No esperes más para llevar tu experiencia de juego al siguiente nivel con el Intel Core i7-10700.",
+      "caracteristicas": [
+        "Procesador Intel Core i710700 de 8 núcleos para un rendimiento óptimo en juegos.",
+        "Frecuencia máxima de 4.8 GHz para aplicaciones exigentes y multitarea fluida",
+        "Compatible con memoria RAM DDR4 para mayor velocidad y eficiencia",
+        "Diseño de 14 nm y 65 W de potencia térmica para menor consumo y durabilidad"
+      ],
+      "precio": "150000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_929815-MLA42767633540_072020-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_729444-MLA42903822558_072020-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_894773-MLA42767646668_072020-O.webp"
+      ],
+      "id": 16
+    },
+    {
+      "clasificacion": "4",
+      "nombre": "Auriculares gamer HyperX Cloud Stinger",
+      "marcaid": "6",
+      "tipoid": "6",
+      "descripcion": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los HyperX Stinger no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.",
+      "caracteristicas": [
+        "Con cancelación de ruido.",
+        "Micrófono flexible incorporado.",
+        "El largo del cable es de 1.3 m.",
+        "Tamaño del altavoz: 50mm."
+      ],
+      "precio": "31800",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_775551-MLA40154584077_122019-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_918870-MLA40154460221_122019-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_812659-MLA54897380672_042023-O.webp"
+      ],
+      "id": 17
+    },
+    {
+      "clasificacion": "5",
+      "nombre": "Notebook Asus Intel I5 1135g7 8gb 256gb Ssd 15.6",
+      "marcaid": "2",
+      "tipoid": "8",
+      "descripcion": "Ya sea para trabajar o jugar, la computadora portátil ASUS Vivobook 15 F1500 es la computadora portátil de nivel de entrada que ofrece un rendimiento potente y efectos visuales inmersivos. La pantalla Nano Edge de la computadora portátil ASUS Vivobook 15 cuenta con amplios ángulos de visión de 178 grados. ASUS Vivobook 15 Laptop viene con procesador Intel Core i5, 8GB RAM, 256GB SSD y Windows 11 Home. La computadora portátil ASUS Vivobook 15 está equipada con todos los puertos que necesita. Viene con una amplia conectividad con USB 3.2 Gen 1 tipo C, USB 3.2 Gen 1 tipo A, USB 2.0 tipo A, conector de audio combinado de 3,5 mm, Wi-Fi 5 (802.11ac) y Bluetooth 4.1",
+      "caracteristicas": [
+        "Procesador Intel Core i5.",
+        "Memoria RAM de 8GB.",
+        "Resolución de 1920x1080 px.",
+        "Conexión wifi y bluetooth.",
+        "Cuenta con puerto USB y puerto HDMI."
+      ],
+      "precio": "328000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_754347-MLU69857982717_062023-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_816944-MLU69857982719_062023-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_696329-MLU69857982721_062023-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_685215-MLU69857982727_062023-O.webp"
+      ],
+      "id": 18
+    },
+    {
+      "clasificacion": "5",
+      "nombre": "Monitor Asus  VA27EHE led 27\"",
+      "marcaid": "2",
+      "tipoid": "7",
+      "descripcion": "Una experiencia visual de calidad\n\nEste monitor de 27 te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Una de sus virtudes es que posee pantalla antirreflejo, de esta manera no verás reflejado lo que está detrás de vos y vas a evitar forzar tu vista para enfocar el contenido. Su tiempo de respuesta de 5 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
+      "caracteristicas": [
+        "Pantalla led de 27.",
+        "Tiene una resolución de 1920px-1080px.",
+        "Relación de aspecto de 16:9.",
+        "Panel IPS.",
+        "Tipos de conexión: VGA/D-Sub, HDMI"
+      ],
+      "precio": "142000",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_665931-MLA45212708615_032021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_689498-MLA45212724396_032021-O.webp"
+      ],
+      "id": 19
     }
   ],
   "usuarios": [
@@ -359,6 +521,12 @@
       "password": "123",
       "nombre": "pepe",
       "id": 3
+    },
+    {
+      "email": "martinrodriguez.1209@gmail.com",
+      "password": "123456",
+      "nombre": "Martin",
+      "id": 4
     }
   ],
   "compras": [
@@ -382,7 +550,7 @@
       "precioTotal": 170000,
       "userId": 1,
       "fechaDeCompra": "06/06/23",
-      "estadoDeCompra": "Entregado",
+      "estadoDeCompra": "En proceso",
       "id": 1
     },
     {
@@ -407,6 +575,37 @@
       "fechaDeCompra": "06/06/23",
       "estadoDeCompra": "En proceso",
       "id": 2
+    },
+    {
+      "tajeta": "123456",
+      "titularTarjeta": "martin rodriguezl",
+      "fechaExpiracion": "05/12",
+      "CVV": "111",
+      "direccionEnvio": "sol de mayo",
+      "codigoPostal": "5000",
+      "carritoDeCompra": [
+        {
+          "productoId": 16,
+          "cantidad": 1
+        },
+        {
+          "productoId": 2,
+          "cantidad": 1
+        },
+        {
+          "productoId": 8,
+          "cantidad": 2
+        },
+        {
+          "productoId": 19,
+          "cantidad": 1
+        }
+      ],
+      "precioTotal": 340345,
+      "userId": 4,
+      "fechaDeCompra": "01/08/23",
+      "estadoDeCompra": "Entregado",
+      "id": 3
     }
   ]
 }

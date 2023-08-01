@@ -104,3 +104,10 @@ document
     console.log("se agrego al carrito");
     console.log(localeService.getCarrito());
   });
+document
+  .getElementById("button_comprar_producto")
+  .addEventListener("click", function () {
+    localeService.agregarCarrito(parseInt(idProducto), 1);
+    console.log("se agrego al carrito");
+    console.log(localeService.getCarrito());
+  });

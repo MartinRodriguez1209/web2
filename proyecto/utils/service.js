@@ -63,12 +63,14 @@ export async function getPostCategorias() {
 export async function getUser(mail, contrasenia) {
   try {
     var r = await fetch(
-      URL + "usuarios?mail=" + mail + "&contrasenia=" + contrasenia
+      URL + "usuarios?email=" + mail + "&password=" + contrasenia
     );
+    console.log(URL + "usuarios?email=" + mail + "&password=" + contrasenia);
     if (!r.ok) {
       throw new Error(`HTTP error! status: ${r.status}`);
     }
     var usuario = await r.json();
+    console.log(usuario);
     usuario = usuario[0];
     return usuario;
   } catch (error) {
@@ -127,6 +129,21 @@ export async function createUser(email, password, nombre) {
 export async function getPostListaProductos(tipoId) {
   try {
     var r = await fetch(URL + "productos?tipoid=" + tipoId);
+    if (!r.ok) {
+      throw new Error(`HTTP error! status: ${r.status}`);
+    }
+    var resultado = await r.json();
+    return resultado;
+  } catch (error) {
+    showToast("Error al obtener producto: " + error.message);
+    throw error;
+  }
+}
+export async function getPostListaProductosPorMarca(tipoId, marcaId) {
+  try {
+    var r = await fetch(
+      URL + "productos?tipoid=" + tipoId + "&marcaid=" + marcaId
+    );
     if (!r.ok) {
       throw new Error(`HTTP error! status: ${r.status}`);
     }

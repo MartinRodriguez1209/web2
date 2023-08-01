@@ -1,8 +1,9 @@
+TODO  
+quitar la barra de busqueda LISTO 
+añadir los filtros de busquedad LISTO
+poblar la base de datos con mas productos LISTO
 
-colores
+validaciones en los campos 
 
-2B2025
-3F3F52
-70675D
-EFE2B8
-EDE5B8
+manejo de errores con notificaciones
+que no se pueda ir al carrito o agregar al carrito sin estar logeado LISTO

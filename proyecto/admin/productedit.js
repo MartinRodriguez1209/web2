@@ -14,10 +14,10 @@ service
       producto.clasificacion;
     document.getElementById("nombreInput").value = producto.nombre;
     document.getElementById("marcaIdInput").value = marcas.find(
-      (c) => c.id === producto.tipoid
+      (c) => parseInt(c.id) === parseInt(producto.marcaid)
     ).nombre;
     document.getElementById("tipoIdInput").value = categoria.find(
-      (c) => c.id === producto.tipoid
+      (c) => parseInt(c.id) === parseInt(producto.tipoid)
     ).nombre;
     document.getElementById("descripcionInput").value = producto.descripcion;
 

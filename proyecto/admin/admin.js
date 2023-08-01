@@ -18,6 +18,7 @@ async function generarFilasVentas(ventas) {
         <tr>
         <td>${venta.id}</td>
         <td>${usuarioNombre}</td>
+        <td>${venta.fechaDeCompra}</td>
         <td><button class="btn btn-primary"  data-id-venta="${venta.id}">Ver Detalle</button></td>
         <td>${venta.precioTotal}</td>
         <td>
@@ -43,6 +44,7 @@ for (let boton of botones) {
   boton.addEventListener("click", async function (event) {
     const idVenta = parseInt(event.target.getAttribute("data-id-venta"));
     const venta = ventas.find((venta) => venta.id === idVenta);
+
     const detalleVenta = await generarDetalleVenta(venta);
 
     const modal = `

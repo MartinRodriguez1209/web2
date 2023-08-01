@@ -13,16 +13,20 @@ export function logoutUser() {
 }
 
 export function agregarCarrito(productoId, cantidad) {
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  let itemExistente = carrito.find((item) => item.productoId === productoId);
+  if (checkUser()) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let itemExistente = carrito.find((item) => item.productoId === productoId);
 
-  if (itemExistente) {
-    itemExistente.cantidad += cantidad;
+    if (itemExistente) {
+      itemExistente.cantidad += cantidad;
+    } else {
+      carrito.push({ productoId, cantidad });
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
   } else {
-    carrito.push({ productoId, cantidad });
+    return;
   }
-
-  localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 export function borrarProductoCarrito(productoId) {

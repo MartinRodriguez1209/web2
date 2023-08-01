@@ -56,6 +56,8 @@ function initHomeScript() {
           loginForm.elements.input_mail.value,
           loginForm.elements.input_password.value
         );
+        console.log(user);
+        debugger;
         localeService.loginUser(user);
         checkUser();
         var modal = document.getElementById("loginModal");

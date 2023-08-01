@@ -7,5 +7,5 @@ cargarPerfil();
 
 function cargarPerfil() {
   document.getElementById("nombre_usuario").innerText = usuario.nombre;
-  document.getElementById("mail_usuario").innerText = usuario.mail;
+  document.getElementById("mail_usuario").innerText = usuario.email;
 }
